@@ -3,6 +3,8 @@ package com.example.calculator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
         mDisplay = findViewById( R.id.display );
 
         // Log.i("CALCULATOR", "Called onCreate");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu( Menu menu ) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu );
+        return true;
     }
 
     public void buttonPressed( View view ) {
